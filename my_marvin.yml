@@ -16,4 +16,43 @@ jenkins:
           - id: "nasso"
             name: "Nassim"
             password: ${USER_NASSO_PASSWORD}
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "admin"
+            description: "Marvin master"
+            permissions:
+              - "Overall/Administer"
+          - name: "ape"
+            description: "Pedagogical team member"
+            permissions:
+              - "job/Build"
+              - "job/Workspace"
+          - name: "gorilla"
+            description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
+            permissions:
+              - "job/Build"    
+              - "job/Workspace"
+              - "job/Create"
+              - "job/Move"
+              - "job/Configure" 
+              - "job/Delete"
+              - "job/Cancel"
+          - name: "assist"
+            description: "Assistant"
+            permissions:
+              - "job/Read"
+              - "job/Workspace"
+      assignments:
+        global:
+          admin:
+            - "chocolateen"
+          ape:
+            - "i_dont_know"
+          gorilla:
+            - "vaugie_g"
+          assist:
+            - "nasso"
+
 
