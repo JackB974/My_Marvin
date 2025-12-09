@@ -29,6 +29,7 @@ jenkins:
             permissions:
               - "Job/Build"
               - "Job/Workspace"
+              - "Overall/Read"
           - name: "gorilla"
             description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
             permissions:
@@ -39,11 +40,13 @@ jenkins:
               - "Job/Configure" 
               - "Job/Delete"
               - "Job/Cancel"
+              - "Overall/Read"
           - name: "assist"
             description: "Assistant"
             permissions:
               - "Job/Read"
               - "Job/Workspace"
+              - "Overall/Read"
       assignments:
         global:
           admin:
