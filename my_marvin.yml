@@ -26,6 +26,9 @@ jenkins:
             description: "Marvin master"
             permissions:
               - "Overall/Administer"
+              - "Overall/Read"
+            entries:
+              - user: "chocolateen"
 
           - name: "ape"
             description: "Pedagogical team member"
@@ -33,10 +36,13 @@ jenkins:
               - "hudson.model.Item.Build"
               - "hudson.model.Item.Workspace"
               - "hudson.model.Item.Read"
+            entries:
+              - user: "i_dont_know"
 
           - name: "gorilla"
             description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
             permissions:
+              - "hudson.model.Item.Read"
               - "hudson.model.Item.Build"
               - "hudson.model.Item.Workspace"
               - "hudson.model.Item.Create"
@@ -44,22 +50,15 @@ jenkins:
               - "hudson.model.Item.Configure"
               - "hudson.model.Item.Delete"
               - "hudson.model.Item.Cancel"
-              - "hudson.model.Item.Read"
-
+            entries:
+              - user: "vaugie_g"
 
           - name: "assist"
             description: "Assistant"
             permissions:
               - "hudson.model.Item.Read"
               - "hudson.model.Item.Workspace"
-
-      assignments:
-        global:
-          admin:
-            - "chocolateen"
-          ape:
-            - "i_dont_know"
-          gorilla:
-            - "vaugie_g"
-          assist:
-            - "nasso"
+            entries:
+              - user: "nasso"
+jobs:
+  - file: 'C:\Users\aurel\Desktop\My_Marvin\job_dsl.groovy'
