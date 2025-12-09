@@ -27,23 +27,23 @@ jenkins:
           - name: "ape"
             description: "Pedagogical team member"
             permissions:
-              - "job/Build"
-              - "job/Workspace"
+              - "Job/Build"
+              - "Job/Workspace"
           - name: "gorilla"
             description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
             permissions:
-              - "job/Build"    
-              - "job/Workspace"
-              - "job/Create"
-              - "job/Move"
-              - "job/Configure" 
-              - "job/Delete"
-              - "job/Cancel"
+              - "Job/Build"    
+              - "Job/Workspace"
+              - "Job/Create"
+              - "Job/Move"
+              - "Job/Configure" 
+              - "Job/Delete"
+              - "Job/Cancel"
           - name: "assist"
             description: "Assistant"
             permissions:
-              - "job/Read"
-              - "job/Workspace"
+              - "Job/Read"
+              - "Job/Workspace"
       assignments:
         global:
           admin:
