@@ -32,6 +32,7 @@ jenkins:
             permissions:
               - "hudson.model.Item.Build"
               - "hudson.model.Item.Workspace"
+              - "hudson.model.Item.Read"
 
           - name: "gorilla"
             description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
@@ -43,6 +44,8 @@ jenkins:
               - "hudson.model.Item.Configure"
               - "hudson.model.Item.Delete"
               - "hudson.model.Item.Cancel"
+              - "hudson.model.Item.Read"
+
 
           - name: "assist"
             description: "Assistant"
@@ -60,15 +63,3 @@ jenkins:
             - "vaugie_g"
           assist:
             - "nasso"
-  jobs:
-    - script: >
-        job('seed') {
-          description('Job that loads all DSL scripts.')
-          steps {
-            dsl {
-              external('job_dsl.groovy')
-              lookupStrategy('SEED_JOB')
-              removeAction('DELETE')
-            }
-          }
-        }
