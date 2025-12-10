@@ -61,4 +61,4 @@ jenkins:
             entries:
               - user: "nasso"
 jobs:
-  - file: 'C:\Users\aurel\Desktop\My_Marvin\job_dsl.groovy'
+  - file: 'job_dsl.groovy'
